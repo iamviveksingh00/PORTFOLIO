@@ -111,10 +111,18 @@ footer {
     transform: scale(1.05);
 }
 
+/* ✅ Logos of same size */
 .company-logo {
-    width: 100px;
-    height: auto;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
     margin-bottom: 15px;
+}
+
+/* ✅ Justified text for responsibilities */
+.responsibilities {
+    text-align: justify;
+    padding: 0 10px;
 }
 
 .view-certificate {
@@ -143,4 +151,3 @@ footer {
         width: 90%;
     }
 }
-
