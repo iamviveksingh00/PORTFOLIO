@@ -107,19 +107,26 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-.experience-card:hover {
-    transform: scale(1.05);
+/* ✅ Logo + Company Name in One Line */
+.experience-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-/* ✅ Logos of same size */
 .company-logo {
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
-    margin-bottom: 15px;
 }
 
-/* ✅ Justified text for responsibilities */
+.experience-header strong {
+    font-size: 1.2em;
+}
+
+/* ✅ Justified Responsibilities */
 .responsibilities {
     text-align: justify;
     padding: 0 10px;
