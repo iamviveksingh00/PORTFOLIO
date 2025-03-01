@@ -176,7 +176,7 @@ nav ul li a:hover::after {
 .experience-grid {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
