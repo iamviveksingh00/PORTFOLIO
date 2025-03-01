@@ -199,23 +199,21 @@ nav ul li a:hover::after {
     transform: rotateY(180deg);
 }
 
-/* Improve Card Layout */
+/* ✅ Front Side of Card */
 .experience-card-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;  /* Adjusted spacing */
-    padding: 20px;
-}
-
-/* Ensure Text Fills Space */
-.experience-card-front h3 {
-    font-size: 20px; /* Slightly larger */
-}
-
-.experience-card-front p {
-    font-size: 16px; /* Adjust for better readability */
+    padding: 15px;
+    text-align: center;
 }
 
 .experience-card-back {
@@ -245,6 +243,25 @@ nav ul li a:hover::after {
     width: 80px;  /* Adjusted for better fit */
     height: auto;  /* Maintain aspect ratio */
     margin-bottom: 10px;
+}
+
+/* Improve Card Layout */
+.experience-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* Adjusted spacing */
+    padding: 20px;
+}
+
+/* Ensure Text Fills Space */
+.experience-card-front h3 {
+    font-size: 20px; /* Slightly larger */
+}
+
+.experience-card-front p {
+    font-size: 16px; /* Adjust for better readability */
 }
 
 /* ✅ View Certificate Button */
