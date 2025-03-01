@@ -253,3 +253,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.logo img {
+    width: 120px;  /* Adjust size as needed */
+    height: auto;
+}
