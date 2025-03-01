@@ -185,9 +185,10 @@ footer {
 }
 
 .skill-card img {
-    width: 150px;  /* Increased from 60px to 80px */
-    height: 130px;
+    width: 100px;  /* Adjusted size to fit well */
+    height: 100px;
     margin-bottom: 15px;
+    object-fit: contain; /* Ensures the image scales properly */
 }
 
 .skill-card:hover {
