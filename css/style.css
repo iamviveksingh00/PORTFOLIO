@@ -286,10 +286,5 @@ nav ul li a.active {
     border-bottom: none; /* Removes the blue underline */
 }
 
-nav ul li a:hover {
-    background-color: #555; /* Slightly lighter gray on hover */
-    color: #ffffff;
-    border-bottom: none; /* Ensure no underline appears on hover */
-}
 
 
