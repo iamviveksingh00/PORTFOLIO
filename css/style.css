@@ -185,8 +185,8 @@ footer {
 }
 
 .skill-card img {
-    width: 80px;  /* Increased from 60px to 80px */
-    height: 80px;
+    width: 100px;  /* Increased from 60px to 80px */
+    height: 100px;
     margin-bottom: 15px;
 }
 
