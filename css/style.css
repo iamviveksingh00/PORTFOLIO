@@ -168,7 +168,7 @@ nav ul li a:hover::after {
 
 /* ========== EXPERIENCE SECTION ========== */
 .experience-container {
-    text-align: center;
+    text-align: justify;
     padding: 20px;
 }
 
