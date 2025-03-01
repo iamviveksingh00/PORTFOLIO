@@ -253,7 +253,30 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* ✅ Align Logo to the Left */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Moves logo to the left */
+    padding-left: 20px; /* Adds space from the left edge */
+}
+
+/* ✅ Make Logo Circular */
 .logo img {
-    width: 120px;  /* Adjust size as needed */
-    height: auto;
+    width: 60px;  /* Adjust size as needed */
+    height: 60px; /* Same as width to make it circular */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures it fits properly */
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #007BFF;  /* Highlight color */
+    border-radius: 5px;
+    font-weight: bold;
 }
