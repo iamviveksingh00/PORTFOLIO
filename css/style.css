@@ -276,14 +276,14 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: #00bfff; /* Neon Blue - Professional Look */
-    font-weight: bold;
-    border-bottom: 2px solid #00bfff; /* Underline Effect */
-    transition: 0.3s ease-in-out;
+    background-color: #333; /* Dark gray background for card effect */
+    color: #ffffff; /* White text */
+    padding: 8px 15px; /* Padding for a card-like feel */
+    border-radius: 8px; /* Rounded corners */
+    transition: background 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     color: #ffffff; /* White when hovered */
-    border-bottom: 2px solid #ffffff;
 }
 
