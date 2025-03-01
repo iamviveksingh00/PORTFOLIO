@@ -295,8 +295,8 @@ nav ul li a.active {
 }
 
 .project-card {
-    width: 250px;
-    height: 300px;
+    width: 270px;
+    height: 320px;
     perspective: 1000px;
 }
 
@@ -312,42 +312,48 @@ nav ul li a.active {
     transform: rotateY(180deg);
 }
 
-.project-front,
-.project-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
+/* Front Side */
 .project-front {
-    background: #222;
+    background: #2a2a2a;  /* Dark Gray */
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 170, 255, 0.3); /* Subtle blue glow */
 }
 
 .project-front img {
-    width: 80%;
+    width: 85%;
     border-radius: 10px;
 }
 
+/* Back Side */
 .project-back {
-    background: #333;
-    color: #fff;
+    background: #1e3a5f;  /* Deep Navy Blue */
+    color: #ffffff;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 170, 255, 0.3); /* Same blue glow */
+}
+
+.project-back h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project-back p {
+    font-size: 14px;
+    opacity: 0.9;
 }
 
 
