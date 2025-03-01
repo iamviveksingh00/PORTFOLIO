@@ -168,15 +168,15 @@ nav ul li a:hover::after {
 
 /* ========== EXPERIENCE SECTION ========== */
 .experience-container {
-    text-align: left;
+    text-align: center;
     padding: 20px;
 }
 
 /* ✅ Experience Grid */
 .experience-grid {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: left;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
