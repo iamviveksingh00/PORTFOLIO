@@ -276,7 +276,14 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background-color: #007BFF;  /* Highlight color */
-    border-radius: 5px;
+    color: #00bfff; /* Neon Blue - Professional Look */
     font-weight: bold;
+    border-bottom: 2px solid #00bfff; /* Underline Effect */
+    transition: 0.3s ease-in-out;
 }
+
+nav ul li a:hover {
+    color: #ffffff; /* White when hovered */
+    border-bottom: 2px solid #ffffff;
+}
+
