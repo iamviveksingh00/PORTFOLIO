@@ -276,17 +276,20 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background-color: #444; /* Dark gray for visibility */
+    background-color: #444; /* Dark gray for card effect */
     color: #ffffff; /* White text */
-    padding: 10px 18px; /* Increased padding for a card-like appearance */
-    border-radius: 10px; /* Rounded corners for card effect */
+    padding: 10px 18px; /* Spacing for a card-like effect */
+    border-radius: 20px; /* Fully rounded corners */
     font-weight: bold;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     transition: all 0.3s ease-in-out;
+    border-bottom: none; /* Removes the blue underline */
 }
 
 nav ul li a:hover {
     background-color: #555; /* Slightly lighter gray on hover */
     color: #ffffff;
+    border-bottom: none; /* Ensure no underline appears on hover */
 }
+
 
