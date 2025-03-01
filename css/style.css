@@ -99,7 +99,7 @@ nav ul li a:hover::after {
 .certifications-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: wrap;
     padding: 20px;
 }
