@@ -199,21 +199,23 @@ nav ul li a:hover::after {
     transform: rotateY(180deg);
 }
 
-/* ✅ Front Side of Card */
+/* Improve Card Layout */
 .experience-card-front {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    text-align: center;
+    gap: 10px;  /* Adjusted spacing */
+    padding: 20px;
+}
+
+/* Ensure Text Fills Space */
+.experience-card-front h3 {
+    font-size: 20px; /* Slightly larger */
+}
+
+.experience-card-front p {
+    font-size: 16px; /* Adjust for better readability */
 }
 
 .experience-card-back {
@@ -238,11 +240,11 @@ nav ul li a:hover::after {
     transform: rotateY(180deg);
 }
 
-/* ✅ Logo + Company Name */
+/* Increase Logo Size */
 .company-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+    width: 80px;  /* Adjusted for better fit */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 10px;
 }
 
 /* ✅ View Certificate Button */
