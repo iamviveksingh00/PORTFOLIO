@@ -276,14 +276,17 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background-color: #333; /* Dark gray background for card effect */
+    background-color: #444; /* Dark gray for visibility */
     color: #ffffff; /* White text */
-    padding: 8px 15px; /* Padding for a card-like feel */
-    border-radius: 8px; /* Rounded corners */
-    transition: background 0.3s ease-in-out;
+    padding: 10px 18px; /* Increased padding for a card-like appearance */
+    border-radius: 10px; /* Rounded corners for card effect */
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* White when hovered */
+    background-color: #555; /* Slightly lighter gray on hover */
+    color: #ffffff;
 }
 
