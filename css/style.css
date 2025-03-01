@@ -176,7 +176,7 @@ nav ul li a:hover::after {
 .experience-grid {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
@@ -229,7 +229,7 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    text-align: justify;
+    text-align: left;
 }
 
 /* ✅ Back Side (Flipped Side) */
