@@ -1,47 +1,429 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-:root {
-    --dark-blue: #211C84;
-    --medium-blue: #4D55CC;
-    --soft-blue: #7A73D1;
-    --light-purple: #B5A8D5;
-    --white: #ffffff;
-    --black: #000000;
-}
-
+/* ========== GENERAL STYLES ========== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--light-purple);
-    color: var(--black);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* ========== NAVIGATION BAR ========== */
 header {
-    background: var(--dark-blue);
-    color: var(--white);
+    background: #222;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* ✅ Underline Hover Effect */
+nav ul li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #007BFF;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* ========== GENERAL LAYOUT ========== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ========== CERTIFICATIONS ========== */
+.certifications-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.cert-card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.cert-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.cert-card:hover .cert-inner {
+    transform: rotateY(180deg);
+}
+
+.cert-front,
+.cert-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.cert-front img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.cert-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.view-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #218838;
+}
+
+
+/* ========== EXPERIENCE SECTION ========== */
+.experience-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ✅ Experience Grid */
+.experience-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;  /* Increased spacing between cards */
+    flex-wrap: wrap;
+}
+
+/* ✅ Flip Card Layout */
+.experience-card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.experience-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.experience-card:hover .experience-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ✅ Front Side of Card */
+.experience-card-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     text-align: center;
+    gap: 15px;  /* Improved spacing */
 }
 
-button {
-    background: var(--medium-blue);
-    color: var(--white);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* ✅ Back Side (Flipped Side) */
+.experience-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+    transform: rotateY(180deg);
 }
 
-button:hover {
-    background: var(--soft-blue);
+/* ✅ Increased Logo Size */
+.company-logo {
+    width: 120px;  /* Increased size */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 10px;
 }
 
-a {
-    color: var(--dark-blue);
+/* ✅ Improve Card Layout */
+.experience-card-front h3 {
+    font-size: 20px; /* Slightly larger */
+    margin: 0;
+}
+
+.experience-card-front p {
+    font-size: 16px; /* Adjust for better readability */
+    margin: 0;
+}
+
+/* ✅ View Certificate Button */
+.view-certificate {
+    background: #007BFF;
+    color: white;
     text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
-a:hover {
-    color: var(--medium-blue);
+.view-certificate:hover {
+    background: #0056b3;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .experience-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 90%;
+    }
+}
+
+
+/* ========== SKILLS SECTION ========== */
+.skills-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card img {
+    width: 120px;  /* Adjusted size to fit well */
+    height: 120px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* ✅ Align Logo to the Left */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Moves logo to the left */
+    padding-left: 20px; /* Adds space from the left edge */
+}
+
+/* ✅ Make Logo Circular */
+.logo img {
+    width: 60px;  /* Adjust size as needed */
+    height: 60px; /* Same as width to make it circular */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures it fits properly */
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #444; /* Dark gray for card effect */
+    color: #ffffff; /* White text */
+    padding: 10px 18px; /* Spacing for a card-like effect */
+    border-radius: 20px; /* Fully rounded corners */
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out;
+    border-bottom: none; /* Removes the blue underline */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.project-card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.project-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.project-card:hover .project-inner {
+    transform: rotateY(180deg);
+}
+
+.project-front,
+.project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-front img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.project-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.view-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #0056b3;
 }
