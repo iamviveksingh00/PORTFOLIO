@@ -427,3 +427,134 @@ nav ul li a.active {
 .view-btn:hover {
     background: #0056b3;
 }
+
+
+/* ========== EDUCATION ========== */
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.edu-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 25px;
+    width: 450px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.edu-card:hover {
+    transform: scale(1.05);
+}
+
+.edu-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #211C84;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4D55CC;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* ========== CONTACT ========== */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #B5A8D5;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Contact Icons */
+.contact-icons {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-icon img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #7A73D1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #4D55CC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #211C84;
+}
