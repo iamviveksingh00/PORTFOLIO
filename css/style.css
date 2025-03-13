@@ -1,45 +1,47 @@
-/* Updated color palette */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 :root {
     --dark-blue: #211C84;
     --medium-blue: #4D55CC;
     --soft-blue: #7A73D1;
     --light-purple: #B5A8D5;
-    --text-color: #FFFFFF; /* Adjusted for readability */
-  }
-  
-  body {
-    background-color: var(--dark-blue);
-    color: var(--text-color);
-  }
-  
-  .header {
-    background-color: var(--medium-blue);
-    color: var(--text-color);
-  }
-  
-  .navbar {
-    background-color: var(--soft-blue);
-  }
-  
-  .button {
-    background-color: var(--medium-blue);
-    color: var(--text-color);
-    border: 1px solid var(--light-purple);
-  }
-  
-  .button:hover {
-    background-color: var(--light-purple);
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-purple);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background: var(--medium-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--soft-blue);
+}
+
+a {
     color: var(--dark-blue);
-  }
-  
-  .footer {
-    background-color: var(--dark-blue);
-    color: var(--text-color);
-  }
-  
-  .card {
-    background-color: var(--light-purple);
-    color: var(--dark-blue);
-    border: 1px solid var(--soft-blue);
-  }
-  
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--medium-blue);
+}
