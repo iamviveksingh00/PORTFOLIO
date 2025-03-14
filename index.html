@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Home</title>
+    <title>Portfolio - Home & About</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/V.jpg" alt="My Portfolio Logo">
+                    <img src="css/images/logo.png" alt="Logo">
                 </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="certifications.html">Certifications</a></li>
@@ -25,13 +25,48 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>    
-    <section class="container">
-        <div class="card">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my journey, experience, projects, and more.</p>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <img src="css/images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="hero-text">
+                <h1>Hi, I'm [Your Name]</h1>
+                <p>Data Scientist | AI Enthusiast | Developer</p>
+                <div class="buttons">
+                    <a href="projects.html" class="btn">View Projects</a>
+                    <a href="css/files/resume.pdf" class="btn">Download Resume</a>
+                </div>
+            </div>
         </div>
     </section>
-    <script src="js/script.js"></script>
+    
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>[Write a short bio about yourself, your experience, and your passion for AI, ML, or development.]</p>
+            <div class="about-cards">
+                <div class="card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>[Your Degree & University]</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Experience</h3>
+                    <p>[Your Work/Internship Experience]</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Skills</h3>
+                    <p>[List some key technical skills]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
