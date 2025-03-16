@@ -589,9 +589,9 @@ p {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 400px;
+    height: 200px;
+    border-radius: 20%;
     margin-right: 20px;
     border: 4px solid #4D55CC;
 }
