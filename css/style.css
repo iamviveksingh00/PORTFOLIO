@@ -105,8 +105,8 @@ nav ul li a:hover::after {
 }
 
 .cert-card {
-    width: 250px;
-    height: 300px;
+    width: 320px;
+    height: 225px;
     perspective: 1000px;
 }
 
