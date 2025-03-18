@@ -28,11 +28,110 @@
     </header>    
     <section class="contact-section">
         <h2>Contact Me</h2>
-        <p>Click on the icons to reach me!</p>
 
+            <!-- Contact Form -->
+            <form action="https://formsubmit.co/iamviveksingh001@gmail.com" method="POST">
+    
+                <h3>Recruiter Information</h3>
+                <input type="text" name="recruiter_name" placeholder="Recruiter's Name" required>
+                <input type="text" name="company_name" placeholder="Company Name" required>
+                <input type="email" name="recruiter_email" placeholder="Recruiter's Email" required>
+                <input type="tel" name="recruiter_phone" placeholder="Phone Number" required>
+            
+                <h3>Job/Opportunity Details</h3>
+                <input type="text" name="job_title" placeholder="Job Title" required>
+                
+                <!-- Dropdown for Job Location -->
+                <label for="job_location">Job Location</label>
+                <select name="job_location" id="job_location" required onchange="toggleCitySelection()">
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Onsite">Onsite</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            
+                <!-- Dropdown for City Selection (Hidden Initially) -->
+                <div id="city-selection" style="display: none;">
+                    <label for="job_city">Select City</label>
+                    <select name="job_city" id="job_city">
+                        <option value="" disabled selected>Select City</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Patna">Patna</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Bhubaneswar">Bhubaneswar</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                        <option value="Varanasi">Varanasi</option>
+                        <option value="Ranchi">Ranchi</option>
+                        <option value="Ludhiana">Ludhiana</option>
+                        <option value="Mysore">Mysore</option>
+                        <option value="Goa">Goa</option>
+                        <!-- Add more cities if needed -->
+                    </select>
+                </div>
+            
+                <!-- Dropdown for Job Type -->
+                <label for="job_type">Job Type</label>
+                <select name="job_type" id="job_type" required>
+                    <option value="" disabled selected>Select Job Type</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Freelance">Freelance</option>
+                </select>
+            
+                <!-- Dropdown for Salary Range -->
+                <label for="salary_range">Salary Range</label>
+                <select name="salary_range" id="salary_range">
+                    <option value="" disabled selected>Select Salary Range</option>
+                    <option value="Less than ₹3 LPA">Less than ₹3 LPA</option>
+                    <option value="₹3 LPA - ₹6 LPA">₹3 LPA - ₹6 LPA</option>
+                    <option value="₹6 LPA - ₹10 LPA">₹6 LPA - ₹10 LPA</option>
+                    <option value="More than ₹10 LPA">More than ₹10 LPA</option>
+                </select>
+            
+                <textarea name="job_description" rows="4" placeholder="Job Description" required></textarea>
+            
+                <h3>Additional Information</h3>
+                
+                <!-- Checkbox for Benefits -->
+                <label>Job Benefits (Check all that apply)</label><br>
+                <input type="checkbox" name="benefits[]" value="Health Insurance"> Health Insurance <br>
+                <input type="checkbox" name="benefits[]" value="Work from Home"> Work from Home <br>
+                <input type="checkbox" name="benefits[]" value="Flexible Hours"> Flexible Hours <br>
+                <input type="checkbox" name="benefits[]" value="Equity/Stock Options"> Equity/Stock Options <br>
+            
+                <textarea name="additional_info" rows="4" placeholder="Any additional details..."></textarea>
+            
+                <button type="submit">Send Job Offer</button>
+            </form>
+            
+                            
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
         <div class="contact-container">
+            
             <!-- Contact Icons -->
             <div class="contact-icons">
+                
                 <a href="mailto:vivek2872002@gmail.com" target="_blank" class="contact-icon">
                     <img src="assets/images/mail.png" alt="Email">
                 </a>
@@ -49,21 +148,6 @@
                     <img src="assets/images/mail.png" alt="Location">
                 </a>
             </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
