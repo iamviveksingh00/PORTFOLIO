@@ -753,3 +753,117 @@ form input[type="checkbox"] {
     border: none;
     margin-top: 20px;
 }
+
+
+
+
+/* ========== Project Details Page Styles (Scoped) ========== */
+.project-details-container {
+    padding: 50px 12%;
+    background: #f8f9fd;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Title & Intro */
+.project-details-container .project-title {
+    font-size: 32px;
+    color: #211C84;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-details-container .project-intro {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Sections */
+.project-details-container .project-section {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-details-container .project-section h2 {
+    font-size: 22px;
+    color: #4D55CC;
+    border-left: 5px solid #7A73D1;
+    padding-left: 12px;
+    margin-bottom: 8px;
+}
+
+.project-details-container .project-section p, 
+.project-details-container .project-section ul {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.project-details-container .project-section ul {
+    padding-left: 20px;
+}
+
+.project-details-container .project-section ul li {
+    background: none;
+    padding: 5px;
+    border-radius: 0;
+    margin-bottom: 6px;
+    list-style-type: disc;
+}
+
+/* ========== Dashboard Styling (Handles Both Coffee & Ola Dashboards) ========== */
+
+/* Default (Single Image Dashboard like Coffee Project) */
+.project-details-container .dashboard-img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Carousel Styling (Only for Ola Dashboard) */
+.project-details-container .carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Hide all images inside the carousel initially */
+.project-details-container .carousel .dashboard-img {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+/* Only show the active carousel image */
+.project-details-container .carousel .dashboard-img.active {
+    display: block;
+}
+
+/* Carousel Buttons */
+.project-details-container .carousel-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project-details-container .carousel-buttons button {
+    background-color: #4D55CC;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-details-container .carousel-buttons button:hover {
+    background-color: #211C84;
+}

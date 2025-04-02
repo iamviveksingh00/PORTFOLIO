@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | OLA Ride Prediction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="project-page">
+
+    <header>
+        <nav class="navbar">
+            <a href="projects.html" class="back-btn">⬅ Back to Projects</a>
+        </nav>
+    </header>
+
+    <section class="project-details-container">
+        <h1 class="project-title">🚖 OLA Ride Prediction</h1>
+        <p class="project-intro">
+            An analytical project using **SQL & Power BI** to predict ride trends, cancellations, and revenue insights.
+        </p>
+
+        <!-- Project Overview -->
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <ul>
+                <li> **SQL:** Data extraction, transformation, and trend analysis.</li>
+                <li> **Power BI:** Interactive dashboards for insights visualization.</li>
+            </ul>
+            <p>This project enables **data-driven decision-making** for ride-sharing businesses by analyzing customer behavior, ride cancellations, and revenue trends.</p>
+        </div>
+
+        <!-- SQL Problem Statement -->
+        <div class="project-section">
+            <h2>SQL Problem Statement</h2>
+            <ul>
+                <li> Retrieve all successful bookings.</li>
+                <li> Find the average ride distance for each vehicle type.</li>
+                <li> Get the total number of cancelled rides by customers.</li>
+                <li> List the top 5 customers with the highest number of rides.</li>
+                <li> Find rides cancelled by drivers due to personal & car issues.</li>
+                <li> Retrieve all rides where payment was made using UPI.</li>
+            </ul>
+        </div>
+
+        <!-- Power BI Analysis -->
+        <div class="project-section">
+            <h2> Power BI Insights</h2>
+            <ul>
+                <li> **Ride Volume Over Time** – Analyze ride trends per day/week.</li>
+                <li> **Booking Status Breakdown** – Success vs. Cancelled rides.</li>
+                <li> **Top 5 Vehicle Types by Ride Distance** – Best-performing vehicle types.</li>
+                <li> **Customer vs. Driver Ratings** – Understanding satisfaction.</li>
+                <li> **Revenue by Payment Method** – Cash, UPI, Credit Card analysis.</li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Preview with Carousel -->
+        <div class="project-section">
+            <h2>Dashboard Preview</h2>
+            <div class="carousel">
+                <img src="assets/images/ola_dashboard1.png" class="dashboard-img active" alt="Dashboard Preview 1">
+                <img src="assets/images/ola_dashboard2.png" class="dashboard-img" alt="Dashboard Preview 2">
+                <img src="assets/images/ola_dashboard3.png" class="dashboard-img" alt="Dashboard Preview 3">
+                <img src="assets/images/OLA_Dashboard4.png" class="dashboard-img" alt="Dashboard Preview 4">
+                <img src="assets/images/OLA_Dashboard5.png" class="dashboard-img" alt="Dashboard Preview 5">
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="prevSlide()">⬅ Prev</button>
+                <button onclick="nextSlide()">Next ➡</button>
+            </div>
+            <p>*This dashboard visualizes ride trends, revenue insights, and cancellation patterns to help optimize ride-sharing operations.*</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Vivek Singh | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.dashboard-img');
+
+        function showSlide(index) {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        }
+    </script>
+</body>
+</html>
