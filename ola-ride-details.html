@@ -15,48 +15,56 @@
     </header>
 
     <section class="project-details-container">
-        <h1 class="project-title">🚖 OLA Ride Prediction</h1>
+        <h1 class="project-title">OLA Ride Prediction</h1>
         <p class="project-intro">
-            An analytical project using **SQL & Power BI** to predict ride trends, cancellations, and revenue insights.
+            An analytical project using SQL & Power BI to predict ride trends, cancellations, and revenue insights.
         </p>
 
         <!-- Project Overview -->
         <div class="project-section">
-            <h2>Project Overview</h2>
-            <ul>
-                <li> **SQL:** Data extraction, transformation, and trend analysis.</li>
-                <li> **Power BI:** Interactive dashboards for insights visualization.</li>
-            </ul>
-            <p>This project enables **data-driven decision-making** for ride-sharing businesses by analyzing customer behavior, ride cancellations, and revenue trends.</p>
+            <h2>Problem Statement</h2>
+            <p>In the rapidly evolving mobility sector, companies like <strong>OLA generate vast amounts of data daily from millions of rides</strong>. However, without structured analysis, <strong>it’s difficult for decision-makers to extract meaningful insights</strong> about customer behavior, driver efficiency, or operational bottlenecks. The challenge was to <strong>analyze OLA’s ride dataset and uncover patterns that could help improve business performance, customer satisfaction, and operational efficiency.</strong></p>
         </div>
 
         <!-- SQL Problem Statement -->
         <div class="project-section">
-            <h2>SQL Problem Statement</h2>
+            <h2>Solution Approach</h2>
             <ul>
-                <li> Retrieve all successful bookings.</li>
-                <li> Find the average ride distance for each vehicle type.</li>
-                <li> Get the total number of cancelled rides by customers.</li>
-                <li> List the top 5 customers with the highest number of rides.</li>
-                <li> Find rides cancelled by drivers due to personal & car issues.</li>
-                <li> Retrieve all rides where payment was made using UPI.</li>
+
+                 <li>   Writing <strong>SQL queries</strong> to explore and clean raw ride data stored in a database.</li>
+                    
+                 <li>   Building an interactive <strong>Power BI dashboard</strong> to visualize key metrics. </li>
+                    
+                 <li>   Providing <strong>data-driven recommendations</strong> based on insights.</li>
+                    
+                 <li>   Demonstrating how <strong>business decisions</strong> can be informed through analytics.</li>
             </ul>
         </div>
 
-        <!-- Power BI Analysis -->
-        <div class="project-section">
-            <h2> Power BI Insights</h2>
-            <ul>
-                <li> **Ride Volume Over Time** – Analyze ride trends per day/week.</li>
-                <li> **Booking Status Breakdown** – Success vs. Cancelled rides.</li>
-                <li> **Top 5 Vehicle Types by Ride Distance** – Best-performing vehicle types.</li>
-                <li> **Customer vs. Driver Ratings** – Understanding satisfaction.</li>
-                <li> **Revenue by Payment Method** – Cash, UPI, Credit Card analysis.</li>
-            </ul>
+
+        <div class="project-section" id="sql-carousel">
+            <h2> SQL Queries</h2>
+                <div class="carousel">
+                    <img src="assets/images/1.png" class="dashboard-img active" alt="SQL Query 1">
+                    <img src="assets/images/2.png" class="dashboard-img" alt="SQL Query 2">
+                    <img src="assets/images/3.png" class="dashboard-img" alt="SQL Query 3">
+                    <img src="assets/images/4.png" class="dashboard-img" alt="SQL Query 4">
+                    <img src="assets/images/5.png" class="dashboard-img" alt="SQL Query 5">
+                    <img src="assets/images/6.png" class="dashboard-img" alt="SQL Query 6">
+                    <img src="assets/images/7.png" class="dashboard-img" alt="SQL Query 7">
+                    <img src="assets/images/8.png" class="dashboard-img" alt="SQL Query 8">
+                    <img src="assets/images/9.png" class="dashboard-img" alt="SQL Query 9">
+                    <img src="assets/images/10.png" class="dashboard-img" alt="SQL Query 10">
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="prevSlide('sql-carousel')">⬅ Prev</button>
+                    <button onclick="nextSlide('sql-carousel')">Next ➡</button>
+                </div>
+            
         </div>
 
         <!-- Dashboard Preview with Carousel -->
-        <div class="project-section">
+        <div class="project-section" id="dashboard-carousel">
             <h2>Dashboard Preview</h2>
             <div class="carousel">
                 <img src="assets/images/ola_dashboard1.png" class="dashboard-img active" alt="Dashboard Preview 1">
@@ -66,10 +74,36 @@
                 <img src="assets/images/OLA_Dashboard5.png" class="dashboard-img" alt="Dashboard Preview 5">
             </div>
             <div class="carousel-buttons">
-                <button onclick="prevSlide()">⬅ Prev</button>
-                <button onclick="nextSlide()">Next ➡</button>
+                <button onclick="prevSlide('dashboard-carousel')">⬅ Prev</button>
+                <button onclick="nextSlide('dashboard-carousel')">Next ➡</button>
             </div>
             <p>*This dashboard visualizes ride trends, revenue insights, and cancellation patterns to help optimize ride-sharing operations.*</p>
+        </div>
+
+        <!-- Key Insights from Dashboard -->
+        <div class="project-section">
+            <h2> Key Insights Discovered (from Dashboard)</h2>
+            <ul>
+                <li>Out of 103,024 total bookings, over <strong>63,967</strong> were successfully completed, showing strong platform reliability.</li>
+                <li>Around <strong>35.49%</strong> of cancellations were by drivers, mainly due to personal or car issues.</li>
+                <li><strong>30.24%</strong> were by customers, with reasons like driver not moving or no proper updates.</li>
+                <li><strong>Driver unavailability</strong> also contributed notably to failed bookings.</li>
+                <li><strong>Week-on-week ride volumes</strong> show significant fluctuations, indicating <strong>peak and off-peak periods.</strong></li>
+                <li>Revenue is skewed towards a smaller set of high-value customers, showing a Pareto-like effect (<strong>top 5 customers contribute significantly</strong>).</li>
+                <li><strong>Cash and UPI</strong> are the most preferred, with <strong>credit and debit cards</strong> being lesser-used, <strong>showing a pattern in customer behavior.</strong></li>
+                <li>Ratings vary across regions and vehicle types; however, <strong>lower ratings</strong> are often correlated with <strong>cancellations or failed pickups.</strong></li>
+            </ul>
+        </div>
+
+        <!-- Result / Impact -->
+        <div class="project-section">
+            <h2>Result / Impact</h2>
+            <ul>
+                <li> <strong>Operational Improvements:</strong> Identified major pain points (e.g., driver cancellations, customer complaints) which can guide training and driver quality control.</li>
+                <li> <strong>Demand Planning:</strong> The dashboard reveals ride volume trends by date, enabling better driver allocation in peak times and regions.</li>
+                <li> <strong>Customer Segmentation:</strong> Insights into top-paying users and preferred payment methods help design targeted offers and loyalty programs.</li>
+                <li> <strong>Product Optimization:</strong> Recognizing most used vehicle types and cancellation causes assists in improving ride options and communication systems.</li>
+            </ul>
         </div>
     </section>
 
@@ -78,23 +112,41 @@
     </footer>
 
     <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.dashboard-img');
-
-        function showSlide(index) {
+        // Keep separate indices for each carousel
+        const carouselIndices = {};
+    
+        function showSlide(sectionId, index) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
             images.forEach(img => img.classList.remove('active'));
             images[index].classList.add('active');
         }
-
-        function prevSlide() {
-            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-            showSlide(currentIndex);
+    
+        function nextSlide(sectionId) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
+            if (!(sectionId in carouselIndices)) {
+                carouselIndices[sectionId] = 0;
+            }
+    
+            carouselIndices[sectionId] = (carouselIndices[sectionId] + 1) % images.length;
+            showSlide(sectionId, carouselIndices[sectionId]);
         }
-
-        function nextSlide() {
-            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-            showSlide(currentIndex);
+    
+        function prevSlide(sectionId) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
+            if (!(sectionId in carouselIndices)) {
+                carouselIndices[sectionId] = 0;
+            }
+    
+            carouselIndices[sectionId] =
+                (carouselIndices[sectionId] - 1 + images.length) % images.length;
+            showSlide(sectionId, carouselIndices[sectionId]);
         }
-    </script>
+    </script>    
 </body>
 </html>
