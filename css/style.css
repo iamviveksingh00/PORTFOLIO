@@ -110,14 +110,14 @@ nav ul li a:hover::after {
 .certifications-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 100px;
 }
 
 .cert-card {
-    width: 230px;
-    height: 270px;
+    width: 300px;
+    height: 250px;
     perspective: 1000px;
 }
 
@@ -152,8 +152,9 @@ nav ul li a:hover::after {
 }
 
 .cert-front img {
-    width: 80%;
-    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    border-radius: 0px;
 }
 
 .cert-back {
@@ -567,13 +568,20 @@ form input[type="checkbox"] {
 .home-card {
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 96%;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     border-radius: 12px;
-    text-align: left;
+    text-align: justify;
     transition: transform 0.3s ease-in-out;
+    margin-top: 3.5%;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers everything horizontally */
 }
 
 .home-card:hover {
@@ -582,7 +590,7 @@ form input[type="checkbox"] {
 
 .profile-img {
     width: 400px;
-    height: 400px;
+    height: 500px;
     border-radius: 12%;
     margin-right: 20px;
     border: 1px solid #4D55CC;
@@ -603,6 +611,8 @@ form input[type="checkbox"] {
 .btn-container {
     display: flex;
     gap: 15px;
+    justify-content: center; /* Center buttons */
+    margin-top: 15px; /* Space between image and buttons */
 }
 
 .btn {
