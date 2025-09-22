@@ -330,14 +330,14 @@ nav ul li a.active {
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 50px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .project-card {
-    width: 235px;
-    height: 300px;
+    width: 330px;
+    height: 180px;
     perspective: 1000px;
 }
 
@@ -368,7 +368,7 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .project-front img {
