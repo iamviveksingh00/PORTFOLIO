@@ -789,6 +789,20 @@ form input[type="checkbox"] {
 }
 
 
+.project-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #005fa3;
+}
 
 
 

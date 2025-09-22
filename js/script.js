@@ -17,3 +17,5 @@ function toggleCitySelection() {
         citySelection.style.display = "none";
     }
 }
+
+
