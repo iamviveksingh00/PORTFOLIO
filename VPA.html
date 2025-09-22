@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | OLA Ride Prediction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="project-page">
+
+    <header>
+        <nav class="navbar">
+            <a href="projects.html" class="back-btn">⬅ Back to Projects</a>
+        </nav>
+    </header>
+
+    <section class="project-details-container">
+        <h1 class="project-title">Vendor Performance Analysis</h1>
+        <p class="project-intro">
+            An analytical project using Python, SQL & Power BI to evaluate vendor performance across cost, delivery, and profitability metrics.
+        </p>
+
+        <!-- Project Overview -->
+        <div class="project-section">
+            <h2>Problem Statement</h2>
+            <p>Companies often depend on many vendors but lack visibility into how they differ in cost efficiency, delivery reliability, and profitability. This leads to excess costs, delayed deliveries, and missed opportunities to streamline supplier networks. The aim was to quantify vendor performance to support strategic supply chain decisions.</p>
+        </div>
+
+        <div class="project-section">
+            <h2>Solution Approach</h2>
+            <ul>
+                 <li>  Ingested vendor sales, purchase, freight, and inventory data.</li>
+                    
+                 <li>  Cleaned and merged datasets using Python & SQL (SQLite) to generate a consolidated vendor_sales_summary table. </li>
+                    
+                 <li>  Designed SQL queries and CTEs to compute metrics like total purchase costs, sales volume, freight cost, and gross profit per vendor. </li>
+                    
+                 <li>  Explored data visually in Jupyter notebooks (Seaborn, Matplotlib). </li>
+            
+                 <li> Developed Power BI dashboard displaying vendor KPIs: delivery time, cost effectiveness, sales vs purchase ratio, inventory turnover, etc. </li>
+            </ul>
+        </div>
+
+        <div class="project-section" id="sql-carousel">
+            <h2> Data Pipeline Overview </h2>
+                <div class="carousel">
+                    <img src="assets/images/DPO.png" class="dashboard-img active" alt="Data Pipeline Overview">
+                </div>
+        </div>
+
+        <div class="project-section" id="sql-carousel">
+            <h2> SQL Queries</h2>
+                <div class="carousel">
+                    <img src="assets/images/VPA1.1.png" class="dashboard-img active" alt="SQL Query 1">
+                    <img src="assets/images/VPA1.2.png" class="dashboard-img" alt="SQL Query 2">
+                    <img src="assets/images/VPA1.3.png" class="dashboard-img" alt="SQL Query 3">
+                    <img src="assets/images/VPA1.4.png" class="dashboard-img" alt="SQL Query 4">
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="prevSlide('sql-carousel')">⬅ Prev</button>
+                    <button onclick="nextSlide('sql-carousel')">Next ➡</button>
+                </div>
+            
+        </div>
+
+        <!-- Dashboard Preview with Carousel -->
+        <div class="project-section" id="dashboard-carousel">
+            <h2>Dashboard Preview</h2>
+            <div class="carousel">
+                <img src="assets/images/VPA.png" class="dashboard-img active" alt="Dashboard Preview">
+            </div>
+            <p>*This dashboard visualizes ride trends, revenue insights, and cancellation patterns to help optimize ride-sharing operations.*</p>
+        </div>
+
+        <!-- Key Insights from Dashboard -->
+        <div class="project-section">
+            <h2> Key Insights Discovered</h2>
+            <ul>
+                <li>Top vendors contributing the most sales & gross profit were identified, while several low-volume vendors had disproportionately high freight & purchase costs.</li>
+                <li>Bulk purchasing led to lower per-unit costs for certain vendors; revealed brands where cost per unit could be improved.</li>
+                <li>Vendors with slow delivery or high freight cost were flagged for renegotiations.</li>
+                <li>Inventory turnover varied significantly across vendors — some holding inventory too long, increasing storage cost and risk.</li>
+            </ul>
+        </div>
+
+        <!-- Result / Impact -->
+        <div class="project-section">
+            <h2>Result / Impact</h2>
+            <ul>
+                <li> <strong>Cost Saving Opportunities:</strong> Pinpointed vendors whose cost structures (freight + purchase price) could be renegotiated, with potential for reduced spend.</li>
+                <li> <strong>Vendor Optimization:</strong> Helped highlight which vendors to prioritize vs underperformers, enabling leaner vendor management.</li>
+                <li> <strong>Actionable Visibility:</strong> Dashboard enabled transparent views of vendor performance for regular review.</li>
+                <li> <strong>Business Recommendations:</strong> Suggested strategies like bulk discount leverage, vendor consolidation, and optimizing inventory turnover per vendor.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Vivek Singh | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Keep separate indices for each carousel
+        const carouselIndices = {};
+    
+        function showSlide(sectionId, index) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+    
+        function nextSlide(sectionId) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
+            if (!(sectionId in carouselIndices)) {
+                carouselIndices[sectionId] = 0;
+            }
+    
+            carouselIndices[sectionId] = (carouselIndices[sectionId] + 1) % images.length;
+            showSlide(sectionId, carouselIndices[sectionId]);
+        }
+    
+        function prevSlide(sectionId) {
+            const section = document.getElementById(sectionId);
+            const images = section.querySelectorAll('.dashboard-img');
+    
+            if (!(sectionId in carouselIndices)) {
+                carouselIndices[sectionId] = 0;
+            }
+    
+            carouselIndices[sectionId] =
+                (carouselIndices[sectionId] - 1 + images.length) % images.length;
+            showSlide(sectionId, carouselIndices[sectionId]);
+        }
+    </script>    
+</body>
+</html>
