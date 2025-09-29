@@ -17,27 +17,55 @@
     <section class="project-details-container">
         <h1 class="project-title">Vendor Performance Analysis</h1>
         <p class="project-intro">
-            An analytical project using Python, SQL & Power BI to evaluate vendor performance across cost, delivery, and profitability metrics.
+            End-to-end analysis and ETL-driven dashboard that identified vendor concentration risks, inventory carrying issues, and pricing opportunities — enabling procurement and operations teams to prioritize supplier negotiations and reduce working capital exposure...
         </p>
 
         <!-- Project Overview -->
         <div class="project-section">
             <h2>Problem Statement</h2>
-            <p>Companies often depend on many vendors but lack visibility into how they differ in cost efficiency, delivery reliability, and profitability. This leads to excess costs, delayed deliveries, and missed opportunities to streamline supplier networks. The aim was to quantify vendor performance to support strategic supply chain decisions.</p>
+            <p>A mid-sized retail inventory dataset (procurement, sales, stock, and vendor master records) showed inconsistent reporting, wide variance in freight and pricing, and unclear vendor contribution to procurement dollars. The business needed a clear, data-driven view of which vendors and SKUs were driving costs, where capital was locked in unsold inventory, and whether bulk purchasing actually delivered unit-cost savings.</p>
         </div>
 
         <div class="project-section">
             <h2>Solution Approach</h2>
             <ul>
-                 <li>  Ingested vendor sales, purchase, freight, and inventory data.</li>
+                 <p>  As the project lead, I was responsible for :</p>
                     
-                 <li>  Cleaned and merged datasets using Python & SQL (SQLite) to generate a consolidated vendor_sales_summary table. </li>
+                 <li>  Building a reproducible ETL pipeline to consolidate and clean procurement, sales and inventory tables. </li>
                     
-                 <li>  Designed SQL queries and CTEs to compute metrics like total purchase costs, sales volume, freight cost, and gross profit per vendor. </li>
+                 <li>  Implementing data-quality checks and reconciliation steps so KPIs were audit-ready. </li>
                     
-                 <li>  Explored data visually in Jupyter notebooks (Seaborn, Matplotlib). </li>
-            
-                 <li> Developed Power BI dashboard displaying vendor KPIs: delivery time, cost effectiveness, sales vs purchase ratio, inventory turnover, etc. </li>
+                 <li>  Producing an interactive dashboard and a set of evidence-based recommendations to improve procurement decisions, pricing and inventory policies. </li>
+            </ul>
+
+            <ul>
+                <h3>Technical & Analytical approach</h3>
+                <p> <strong>1. Data ingestion & ETL</strong> </p>
+                <li>Connected to the inventory SQLite database and extracted the vendor/sales view (VSS) as the canonical table.</li>
+                <li>Built Python ETL scripts (Pandas + SQL) to standardize columns, handle missing/zero values, convert datatypes, and store a cleaned dataset ready for analysis.</li>
+
+                <p> <strong>2. Data quality & validation</strong> </p>
+                <li>Implemented automated validation checks (null thresholds, negative-value detection, type checks) and row-level filters to remove inconsistent transactions prior to analysis.</li>
+                <li>Created reconciliation queries that compare purchase vs. sales aggregates to ensure traceability.</li>
+                
+                <p> <strong>3. Feature engineering & KPIs</strong> </p>
+                <li>Engineered business metrics such as GrossProfit, ProfitMargin, StockTurnover, TotalPurchaseDollars, and PurchaseContribution% (per vendor).</li>
+                <li>Computed vendor-level aggregates (purchase dollars, sales dollars, gross profit) for ranking and contribution analysis.</li>
+                
+                <p> <strong>4. Exploratory data analysis & statistics</strong> </p>
+                <li>Performed summary statistics and outlier detection to identify extreme freight and price values.</li>
+                <li>Ran correlation analysis to measure relationships (e.g., PurchaseQuantity vs TotalSalesQuantity) and used inferential statistics — two-sample t-tests and 95% confidence intervals — to compare profit margins across vendor cohorts.</li>
+                
+                <p> <strong>5. Business analysis & segmentation</strong> </p>
+                <li> Segmented vendors into top-performing and low-performing groups and analyzed differences in margin, turnover and risk exposure.</li>
+                <li> Measured the effect of order size on unit cost (bulk vs small orders) and identified thresholds where unit cost fell significantly.</li>
+                
+                <p> <strong>6. Visualization & reporting</strong> </p>
+                <li>Built exploratory visualizations (scatter plots, box plots, histograms) using Matplotlib & Seaborn for the analysis notebook. </li>
+                <li> Designed a production-ready Power BI dashboard with drill-downs, DAX KPIs and interactive filters to let stakeholders explore vendor contribution, unsold inventory, and pricing levers.</li>
+
+                <p> <strong>7. Recommendations & documentation</strong> </p>
+                <li>Documented recurring data issues and remediation steps (root-cause notes), and packaged findings into an executive summary and action list. </li>
             </ul>
         </div>
 
@@ -72,22 +100,18 @@
         <div class="project-section">
             <h2> Key Insights Discovered</h2>
             <ul>
-                <li>Total purchase amount is $321.9M with total sales reaching $451.62M, indicating healthy revenue generation. </li>
+                <li><strong>High variance in freight and cost:</strong> Freight values spanned a massive range (example: 0.09 → 257,032.07), indicating inconsistent logistics or occasional bulk shipment outliers that require policy standardization. </li>
 
-                <li> Gross profit stands at $129.72M, translating to a strong profit margin of 31.02%, showcasing effective cost management and pricing strategy. </li>
+                <li> <strong>Profitability anomalies:</strong> Gross profit values included negative extremes (min observed ≈ -52,002.78), suggesting pricing or discounting issues on certain SKUs.</li>
                     
-                <li> Unsold capital is at $15.6M, signaling around 4.86% of purchased inventory remains unsold, highlighting potential inefficiencies in inventory turnover. </li>
+                <li> <strong>Stock turnover extremes:</strong> Stock turnover ranged from 0 up to ~274.5 — showing a mix of deadstock and very fast-moving SKUs requiring differentiated inventory policies. </li>
                     
-                <li> Top vendors contributing to purchases are dominated by Diageo North America (24.23%), followed by Martignetti (13.25%) and Jim Beam Brands (11.51%), demonstrating vendor concentration. </li>    
+                <li> <strong>Strong procurement-sales alignment:</strong> Purchase quantity vs total sales quantity showed near-perfect aggregate correlation (~0.999) — confirming that procurement broadly follows demand, but suggesting opportunities at SKU/vendor level to improve allocation. </li>    
                     
-                <li> Leading sales vendors align closely with purchase contributions, with Diageo achieving the highest sales of $69M. </li>
+                <li> <strong>Bulk purchasing advantage:</strong> Bulk/large orders had substantially lower unit cost — up to ~72% unit cost reduction compared with small orders — highlighting opportunities for negotiated bulk discounts and reorder point optimization. </li>
                     
-                <li> Top-selling brands include Jack Daniels ($8.0M), Tito’s Handmade ($7.4M), and Grey Goose Vodka ($7.2M), indicating strong consumer preference and brand strength. </li>    
-                    
-                <li> The low-performing vendor list shows vendors like Truett Hurst and Ira Goldman with very low performance scores, suggesting opportunities for vendor optimization or phasing out. </li>    
-                    
-                <li> The scatterplot of brands identifies several underperforming target brands, marked in red, indicating areas requiring focused interventions such as marketing support or reconsideration of assortment.</li>
-            </ul>
+                <li> <strong>Margin segmentation insight:</strong> Confidence-interval analysis revealed that low-selling vendors sometimes show higher margin intervals relative to top-sellers (e.g., top-vendor margin CI around 30.7–31.6%), indicating that high margin alone does not equal high revenue — an important nuance for procurement strategy. </li>        
+             </ul>
         </div>
 
         <!-- Result / Impact -->
