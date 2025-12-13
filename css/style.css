@@ -194,7 +194,7 @@ nav ul li a:hover::after {
 
 /* ✅ Flip Card Layout */
 .experience-card {
-    width: 300px;
+    width: 400px;
     height: 350px;
     perspective: 1000px;
 }
