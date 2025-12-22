@@ -188,14 +188,16 @@ nav ul li a:hover::after {
 .experience-grid {
     display: flex;
     justify-content: center;
-    gap: 60px;  /* Increased spacing between cards */
+    gap: 50px;  /* Increased spacing between cards */
     flex-wrap: wrap;
+    margin-top: 400px;
+    margin-bottom: 70px;
 }
 
 /* ✅ Flip Card Layout */
 .experience-card {
-    width: 400px;
-    height: 350px;
+    width: 1000px;
+    height: 190px;
     perspective: 1000px;
 }
 
@@ -224,7 +226,7 @@ nav ul li a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     gap: 15px;  /* Improved spacing */
 }
@@ -249,7 +251,7 @@ nav ul li a:hover::after {
 
 /* ✅ Increased Logo Size */
 .company-logo {
-    width: 120px;  /* Increased size */
+    width: 150px;  /* Increased size */
     height: auto;  /* Maintain aspect ratio */
     margin-bottom: 10px;
 }
@@ -273,7 +275,7 @@ nav ul li a:hover::after {
     padding: 8px 15px;
     border-radius: 6px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0px;
     transition: background 0.3s ease-in-out;
 }
 
@@ -289,7 +291,7 @@ nav ul li a:hover::after {
     }
 
     .experience-card {
-        width: 90%;
+        width: 100%;
     }
 }
 
