@@ -18,4 +18,15 @@ function toggleCitySelection() {
     }
 }
 
+function toggleSkills() {
+    const skills = document.getElementById("extendedSkills");
+    const button = event.target;
 
+    if (skills.style.display === "flex") {
+        skills.style.display = "none";
+        button.innerText = "View Extended Skills";
+    } else {
+        skills.style.display = "flex";
+        button.innerText = "Hide Extended Skills";
+    }
+}

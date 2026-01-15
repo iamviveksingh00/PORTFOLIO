@@ -569,16 +569,18 @@ form input[type="checkbox"] {
 
 .home-card {
     display: flex;
-    align-items: center;
-    width: 96%;
+    align-items: center;               /* Vertically align content */
+    justify-content: center;           /* Align inner content properly */
+    width: 75%;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    border-radius: 12px;
+    padding: 50px;
+    border-radius: 28px;
     text-align: justify;
     transition: transform 0.3s ease-in-out;
-    margin-top: 3.5%;
+    margin: 90px auto 60px auto;       /* ✅ Centers the card */
 }
+
 
 .left-section {
     display: flex;
@@ -591,11 +593,11 @@ form input[type="checkbox"] {
 }
 
 .profile-img {
-    width: 400px;
-    height: 500px;
-    border-radius: 12%;
-    margin-right: 20px;
-    border: 1px solid #4D55CC;
+    width: 260px;
+    height: 327px;
+    border-radius: 28%;
+    margin-right: 10px;
+    border: 0px solid #4D55CC;
 }
 
 .intro-text h1 {
@@ -609,6 +611,194 @@ form input[type="checkbox"] {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+/* ==== CORE SKILLS (HOME PAGE) ==== */
+
+.summary-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.core-skills {
+    margin-top: 10px;
+}
+
+/* ==== SKILLS BOX (HOME PAGE) ==== */
+
+.skills-box {
+    margin-top: 22px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: #f9fafc;
+    border: 1px solid #e1e4f0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.skills-box h3 {
+    font-size: 17px;
+    color: #211C84;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.skills-box-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+}
+
+.skills-box-grid span {
+    padding: 8px 14px;
+    font-size: 14px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d6daf5;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.skills-box-grid span:hover {
+    background: #4D55CC;
+    color: white;
+    border-color: #4D55CC;
+    cursor: default;
+}
+
+
+.skills-category {
+    margin-top: 22px;
+}
+
+.skills-category h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #211C84;
+    margin-bottom: 10px;
+}
+
+.skills-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+}
+
+.skills-chip-group span {
+    padding: 8px 14px;
+    font-size: 13.5px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #d6daf5;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.skills-chip-group span:hover {
+    background: #4D55CC;
+    color: #ffffff;
+    border-color: #4D55CC;
+}
+
+
+/* ==== CORE + EXTENDED SKILLS TOGGLE ==== */
+
+.extended-skills {
+    display: none;
+    margin-top: 12px;
+}
+
+.skills-toggle {
+    margin: 14px 0;
+    text-align: left;
+}
+
+.skills-toggle button {
+    background: transparent;
+    border: none;
+    color: #211C84;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.skills-toggle button:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ==== COMPACT ONE-SCREEN SKILLS ==== */
+
+.compact-skills {
+    padding: 18px 22px;
+}
+
+.skills-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    line-height: 1.4;
+}
+
+.skills-inline span {
+    font-size: 12.5px;
+    padding: 6px 10px;
+    background: #ffffff;
+    border: 1px solid #d6daf5;
+    border-radius: 16px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.skill-label {
+    background: #211C84;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-right: 6px;
+}
+
+
+.core-skills h3 {
+    font-size: 18px;
+    color: #211C84;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 10px 25px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    font-size: 15px;
+    color: #333;
+    padding-left: 18px;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4D55CC;
+    font-weight: bold;
+}
+
+.skills-list li:hover {
+    color: #211C84;
+    cursor: default;
+}
+
 
 .btn-container {
     display: flex;
